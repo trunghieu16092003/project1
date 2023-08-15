@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+.footer-wrap{
+    margin-top: 5vh;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-logo-wrap {
+    flex-basis: 70%;
+}
+
+.footer-logo-wrap .desc {
+    font-size: 1.1rem;
+    max-width: 330px;
+    margin: 2vh 0 0;
+}
+
+.footer-subscribe {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-subscribe a {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    display: block;
+    width: 70%;
+    font-weight: var(--font-weight-three-medium);
+    line-height: 1.3;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.8em 1.8em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #080b12;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: #f9c345;
+    transition: all .2s ease;
+    border-radius: 100px;
+}
+
+.footer-subscribe a:hover {
+    width: 75%;
+    color: #080b12;
+}
+
+.footer-subscribe .desc {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    display: inline-block;
+    margin: 1vh auto 0;
+    opacity: var(--opacity-one);
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+    padding-top: 5vh;
+    border-top: 1px solid #dfe2e6; 
+    display: flex;
+}
+
+.footer-nav-item{
+    flex-grow: 1;
+    flex-basis: calc(100%/6);
+    max-width: 230px;
+    margin-bottom: 3vh;
+    padding-right: 2vw;
+}
+
+.footer-nav-item .title{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-nav-item ul{
+    list-style: none;
+    padding: 0;
+} 
+
+.footer-nav-item ul li{
+    padding-bottom: 8px;
+}
+.footer-nav-item ul li a{
+    color: #080b12;
+    font-weight: 300;
+}
+
+.footer-nav-item ul li:hover a{
+    color: #080b12;
+    text-decoration: underline;
+}

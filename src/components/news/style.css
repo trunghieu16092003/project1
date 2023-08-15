@@ -1,0 +1,28 @@
+.new-list{
+    margin-top: 20px;
+}
+
+.new-list-item{
+    margin-bottom: 20px;
+}
+
+.new-list-item > a{
+    display: block;
+    margin-bottom: 1.5vh
+}
+
+.new-list-item h2 a{
+    color: #080b12;
+     font-weight: 700;
+}
+
+.new-list-item h2:hover a{
+    color: #080b12;
+    text-decoration: underline;
+}
+
+.author-name{
+    font-size: 1.1rem;
+    line-height: 1.4;
+   
+}
