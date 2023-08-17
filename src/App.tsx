@@ -1,31 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/header/Header'
-import Section from './components/content/Section'
-import Popular from './components/popular/Popular'
-import New from './components/news/New'
-import FeaturedPost from './components/featured post/FeaturedPost'
-import PreviousPost from './components/previous/PreviousPost'
-import Like from './components/like/Like'
-import Footer from './components/footer/Footer'
+import React, { useState } from "react";
+import { styled } from "styled-components";
+import SidebarRight from "./components/SidebarRight/SidbarRight";
+import ShowImg from "./components/showIng/ShowImg";
+import { BsMenuUp } from "react-icons/bs";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className='container'>
-      <Header />
-      <Section />
-      <Popular />
-      <New />
-      <FeaturedPost />
-      <PreviousPost />  
-      <Like />
-      <Footer />
-    </div>
-  )
+interface Ilayouts {
+  name: string;
+  imgUrl: string;
+  icons: string;
 }
 
-export default App
+function App() {
+  const datas: Ilayouts[] = [
+    {
+      name: "Live Visual Builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Layout Builer",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Live Visual Builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Live Visual Builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Live Visual Builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Live Visual Builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Form builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/form-builder.jpg",
+      icons: BsMenuUp,
+    },
+    {
+      name: "Live Visual Builder",
+      imgUrl: "https://avada.com/wp-content/uploads/2021/07/live-visual.jpg",
+      icons: BsMenuUp,
+    },
+  ];
+
+  const [imgUrl, setImgUrl] = useState<string>(datas[0].imgUrl);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
+    null
+  );
+
+  const handleClick = (imgUrl: string, index: number) => {
+    setImgUrl(imgUrl);
+    setSelectedItemIndex(index);
+  };
+
+  return (
+    <AppWrapper className="container">
+      <div className="sidebar-right">
+        {datas.map((data, index) => (
+          <SidebarRight
+            key={index}
+            name={data.name}
+            onClick={() => handleClick(data.imgUrl, index)}
+            isSelected={selectedItemIndex === index}
+          />
+        ))}
+      </div>
+      <ShowImg imgUrl={imgUrl} />
+    </AppWrapper>
+  );
+}
+
+const AppWrapper = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export default App;
