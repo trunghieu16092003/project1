@@ -1,0 +1,47 @@
+.modal {
+  margin: 0px;
+}
+
+.pr-20 {
+  margin: 20px;
+}
+
+.custom-input {
+  display: block;
+  border-radius: 50px;
+  width: 300px;
+}
+
+.ant-form {
+  max-width: 100% !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-save {
+  background-color: #ff5c00;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 200px;
+  border-radius: 50px;
+}
+
+.btn-cancel {
+  border: 1px solid #ff5c00;
+  background-color: #fff;
+  color: #ff5c00;
+  width: 200px;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
