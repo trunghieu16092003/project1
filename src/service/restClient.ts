@@ -8,6 +8,7 @@ interface IRestClient {
   url: string;
   params?: any;
   method?: "get" | "post" | "patch" | "put" | "delete";
+  data?: any
 }
 
 const restClient = (config: IRestClient) =>
